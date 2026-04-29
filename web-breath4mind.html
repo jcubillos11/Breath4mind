@@ -1,0 +1,2004 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Breath4Mind — Breathwork · Mindfulness · Pilates · Tonbridge</title>
+  <meta name="description" content="Find your inner peace with Nadia at Breath4Mind. Breathwork, mindfulness, nervous system regulation, Pilates, and Gong Baths in Tonbridge, Kent.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500&family=Cormorant+SC:wght@300;400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --white: #FFFFFF;
+      --bg:       #FAF9F6;
+      --bg-warm:  #F3EFE8;
+      --bg-stone: #EAE4DA;
+      --bg-sage:  #EBF0EC;
+      --bg-dark:  #171410;
+      --bg-dark2: #1F1B16;
+      --text:     #171410;
+      --text-mid: #463E37;
+      --text-soft:#887D74;
+      --accent:   #9B8660;
+      --accent-lt:#C4AA85;
+      --sage:     #78947F;
+      --sage-lt:  #A3BFAB;
+      --border:   #DDD7CC;
+      --border-lt:#ECE8E1;
+      --shadow-sm:0 2px 16px rgba(23,20,16,.05);
+      --shadow-md:0 8px 48px rgba(23,20,16,.11);
+      --shadow-lg:0 24px 80px rgba(23,20,16,.16);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    ::-webkit-scrollbar { width: 3px; }
+    ::-webkit-scrollbar-track { background: var(--bg); }
+    ::-webkit-scrollbar-thumb { background: var(--sage-lt); border-radius: 2px; }
+
+    h1, h2, h3, h4 { font-family: 'Cormorant Garamond', serif; font-weight: 300; line-height: 1.1; }
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
+
+    .eyebrow {
+      font-family: 'Cormorant SC', serif;
+      font-size: .68rem;
+      font-weight: 400;
+      letter-spacing: .3em;
+      text-transform: uppercase;
+      color: var(--sage);
+    }
+
+    .section-label {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 2.5rem;
+    }
+    .section-label::before {
+      content: '';
+      display: block;
+      width: 2.5rem;
+      height: 1px;
+      background: var(--sage);
+      flex-shrink: 0;
+    }
+
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 clamp(1.5rem,5vw,4rem); }
+
+    /* ─── BUTTONS ─── */
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      font-size: .75rem;
+      font-weight: 500;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+      color: var(--white);
+      background: var(--sage);
+      padding: .9rem 2rem;
+      border-radius: 2px;
+      border: 1px solid var(--sage);
+      transition: background .25s, border-color .25s;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .btn-primary:hover { background: var(--text); border-color: var(--text); }
+
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      font-size: .75rem;
+      font-weight: 400;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+      color: var(--text-mid);
+      background: transparent;
+      padding: .9rem 2rem;
+      border-radius: 2px;
+      border: 1px solid var(--border);
+      transition: border-color .25s, color .25s;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .btn-outline:hover { border-color: var(--text); color: var(--text); }
+
+    /* ═══════════════ NAV ═══════════════ */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 900;
+      padding: 1.8rem 0;
+      transition: padding .4s ease, background .4s ease, border-color .4s ease;
+      border-bottom: 1px solid transparent;
+    }
+    nav.scrolled {
+      background: rgba(250,249,246,.94);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      padding: 1.1rem 0;
+      border-color: var(--border-lt);
+      box-shadow: var(--shadow-sm);
+    }
+    .nav-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 clamp(1.5rem,5vw,4rem);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-logo { display: flex; align-items: center; gap: .75rem; }
+    .nav-logo img { height: 42px; width: auto; object-fit: contain; }
+    .nav-logo-text {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.3rem;
+      font-weight: 400;
+      letter-spacing: .05em;
+      color: var(--text);
+    }
+    .nav-logo-text em { font-style: normal; color: var(--sage); }
+
+    .nav-links { display: flex; align-items: center; gap: 2.5rem; list-style: none; }
+    .nav-links a {
+      font-size: .75rem;
+      font-weight: 400;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--text-mid);
+      transition: color .25s;
+    }
+    .nav-links a:hover { color: var(--sage); }
+    .nav-cta {
+      color: var(--white) !important;
+      background: var(--sage);
+      padding: .6rem 1.5rem;
+      border-radius: 2px;
+      transition: background .25s !important;
+    }
+    .nav-cta:hover { background: var(--text) !important; }
+
+    .nav-hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 4px;
+    }
+    .nav-hamburger span {
+      display: block;
+      width: 22px;
+      height: 1.5px;
+      background: var(--text);
+      transition: transform .3s, opacity .3s;
+    }
+    .nav-hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+    .nav-hamburger.open span:nth-child(2) { opacity: 0; }
+    .nav-hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+    .nav-mobile {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: var(--bg);
+      z-index: 899;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2.5rem;
+    }
+    .nav-mobile.open { display: flex; }
+    .nav-mobile a {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.25rem;
+      font-weight: 300;
+      color: var(--text);
+      transition: color .2s;
+    }
+    .nav-mobile a:hover { color: var(--sage); }
+    .nav-mobile-close {
+      position: absolute;
+      top: 1.75rem;
+      right: clamp(1.5rem,5vw,4rem);
+      font-size: .75rem;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      color: var(--text-soft);
+      cursor: pointer;
+      background: none;
+      border: none;
+      font-family: 'Inter', sans-serif;
+    }
+
+    /* ═══════════════ HERO ═══════════════ */
+    .hero {
+      min-height: 100vh;
+      position: relative;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      background:
+        radial-gradient(ellipse at 18% 65%, rgba(120,148,127,.14) 0%, transparent 52%),
+        radial-gradient(ellipse at 82% 22%, rgba(155,134,96,.10) 0%, transparent 48%),
+        linear-gradient(158deg, #EEE9E0 0%, #E7E0D2 28%, #DDD6C8 62%, #E5DECC 100%);
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(circle, rgba(23,20,16,.025) 1px, transparent 0);
+      background-size: 36px 36px;
+      pointer-events: none;
+    }
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: clamp(7rem,14vw,10rem) clamp(1.5rem,5vw,4rem) clamp(5rem,9vw,7rem);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+    }
+    .hero-eyebrow { display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem; }
+    .hero-eyebrow::before { content: ''; width: 2.5rem; height: 1px; background: var(--sage); }
+
+    .hero-title {
+      font-size: clamp(3.6rem,7vw,6.5rem);
+      font-weight: 300;
+      line-height: 1.0;
+      letter-spacing: -.01em;
+      margin-bottom: 1.75rem;
+    }
+    .hero-title em { font-style: italic; color: var(--sage); }
+
+    .hero-subtitle {
+      font-size: 1rem;
+      font-weight: 300;
+      color: var(--text-mid);
+      line-height: 1.75;
+      max-width: 40ch;
+      margin-bottom: 2.5rem;
+    }
+    .hero-tags { display: flex; flex-wrap: wrap; gap: .5rem; margin-bottom: 2.75rem; }
+    .hero-tag {
+      font-size: .68rem;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--text-soft);
+      border: 1px solid var(--border);
+      padding: .35rem .9rem;
+      border-radius: 2px;
+    }
+    .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+    /* hero photo frame */
+    .hero-visual { position: relative; }
+    .hero-img-frame {
+      aspect-ratio: 3/4;
+      border-radius: 4px;
+      overflow: hidden;
+      position: relative;
+    }
+    .hero-img-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+    }
+    /* fallback gradient if image missing */
+    .hero-img-frame:not(:has(img[src])) {
+      background:
+        radial-gradient(ellipse at 45% 28%, rgba(120,148,127,.22) 0%, transparent 55%),
+        linear-gradient(175deg, #CCD1CB 0%, #B8C2B7 45%, #C4C9BE 100%);
+    }
+    .hero-visual::after {
+      content: '';
+      position: absolute;
+      bottom: -1.25rem;
+      right: -1.25rem;
+      width: 58%;
+      height: 58%;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      z-index: -1;
+    }
+    .hero-badge {
+      position: absolute;
+      bottom: 2rem;
+      left: -1.25rem;
+      background: var(--white);
+      padding: 1rem 1.5rem;
+      border-radius: 4px;
+      box-shadow: var(--shadow-md);
+    }
+    .hero-badge-label {
+      font-size: .62rem;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: var(--sage);
+      font-weight: 500;
+      margin-bottom: .2rem;
+    }
+    .hero-badge-value {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.1rem;
+      color: var(--text);
+    }
+    .hero-scroll {
+      position: absolute;
+      bottom: 2.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: .5rem;
+      color: var(--text-soft);
+      font-size: .6rem;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      z-index: 1;
+    }
+    .hero-scroll-line {
+      width: 1px;
+      height: 2.5rem;
+      background: linear-gradient(to bottom, var(--sage-lt), transparent);
+      animation: lineGrow 2s ease-in-out infinite;
+    }
+    @keyframes lineGrow {
+      0%,100% { transform: scaleY(.6); opacity: .5; }
+      50% { transform: scaleY(1); opacity: 1; }
+    }
+
+    /* ═══════════════ STRIP ═══════════════ */
+    .intro-strip { background: var(--bg-dark); padding: 1.75rem 0; }
+    .intro-strip-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 clamp(1.5rem,5vw,4rem);
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0 2.5rem;
+      align-items: center;
+    }
+    .strip-item {
+      font-family: 'Cormorant SC', serif;
+      font-size: .68rem;
+      letter-spacing: .28em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.38);
+      padding: .4rem 0;
+    }
+    .strip-dot { color: var(--sage); padding: .4rem 0; }
+
+    /* ═══════════════ ABOUT ═══════════════ */
+    .about { padding: clamp(5rem,10vw,9rem) 0; }
+
+    .about-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(3rem,8vw,7rem);
+      align-items: center;
+    }
+
+    /* Two-photo composition on the left */
+    .about-photos {
+      position: relative;
+      height: clamp(480px, 60vw, 640px);
+    }
+    .about-photo-nadia {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    .about-photo-nadia img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+    }
+    /* Fallback gradient */
+    .about-photo-nadia:not(:has(img[src])) {
+      background: linear-gradient(175deg, #D0CBBA 0%, #C4BEB0 50%, #CBCABE 100%);
+    }
+
+    /* Bowls hidden from about section — used in hero and gong bath modal only */
+    .about-photo-bowls { display: none; }
+
+    /* Floating accent card */
+    .about-float {
+      position: absolute;
+      bottom: 1.75rem;
+      right: -1rem;
+      background: var(--white);
+      padding: 1.1rem 1.4rem;
+      border-radius: 4px;
+      box-shadow: var(--shadow-md);
+      z-index: 2;
+    }
+    .about-float-sym {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.25rem;
+      font-weight: 300;
+      color: var(--sage);
+      line-height: 1;
+      margin-bottom: .2rem;
+    }
+    .about-float-text {
+      font-size: .68rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--text-soft);
+    }
+
+    /* Text side */
+    .about-text .section-label { margin-bottom: 2rem; }
+    .about-title {
+      font-size: clamp(2.4rem,5vw,4rem);
+      font-weight: 300;
+      margin-bottom: 1.5rem;
+      line-height: 1.1;
+    }
+    .about-title em { font-style: italic; color: var(--sage); }
+    .about-body {
+      font-size: .97rem;
+      line-height: 1.82;
+      color: var(--text-mid);
+      margin-bottom: 1.4rem;
+    }
+    .about-pullquote {
+      border-left: 2px solid var(--sage-lt);
+      padding-left: 1.25rem;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.35rem;
+      font-style: italic;
+      color: var(--text-mid);
+      line-height: 1.5;
+      margin: 2rem 0;
+    }
+    .about-tags { display: flex; flex-wrap: wrap; gap: .5rem; }
+    .about-tag {
+      font-size: .68rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--sage);
+      border: 1px solid var(--sage-lt);
+      padding: .3rem .85rem;
+      border-radius: 2px;
+    }
+
+    /* ═══════════════ SERVICES ═══════════════ */
+    .services { padding: clamp(5rem,10vw,9rem) 0; background: var(--bg-warm); }
+
+    .services-header { text-align: center; margin-bottom: clamp(3rem,6vw,5rem); }
+    .services-header .section-label { justify-content: center; margin-bottom: 1.25rem; }
+    .services-header .section-label::before { display: none; }
+    .services-title { font-size: clamp(2.2rem,4.5vw,3.75rem); font-weight: 300; line-height: 1.15; }
+    .services-title em { font-style: italic; color: var(--sage); }
+    .services-sub {
+      font-size: .95rem;
+      color: var(--text-soft);
+      max-width: 48ch;
+      margin: 1.25rem auto 0;
+      line-height: 1.75;
+    }
+
+    /* Grid with hairline borders */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5px;
+      background: var(--border);
+      border: 1.5px solid var(--border);
+      border-radius: 6px;
+      overflow: hidden;
+    }
+
+    /* Clickable service card */
+    .service-card {
+      background: var(--white);
+      padding: clamp(2rem,4vw,3rem);
+      transition: background .3s, transform .2s;
+      position: relative;
+      cursor: pointer;
+      -webkit-user-select: none;
+      user-select: none;
+    }
+    .service-card:hover { background: var(--bg-sage); }
+    .service-card:active { transform: scale(.99); }
+
+    .svc-icon { width: 2.25rem; height: 2.25rem; color: var(--sage); margin-bottom: 1.75rem; }
+    .svc-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.55rem;
+      font-weight: 400;
+      color: var(--text);
+      margin-bottom: .75rem;
+      line-height: 1.2;
+    }
+    .svc-desc { font-size: .87rem; line-height: 1.75; color: var(--text-soft); }
+    .svc-badge {
+      display: inline-block;
+      margin-top: 1.1rem;
+      font-size: .63rem;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      color: var(--sage);
+      font-weight: 500;
+    }
+
+    /* "Learn more" row at card bottom */
+    .svc-cta {
+      display: flex;
+      align-items: center;
+      gap: .4rem;
+      margin-top: 1.5rem;
+      font-size: .68rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--sage);
+      font-weight: 500;
+      transition: gap .2s;
+    }
+    .svc-cta svg { transition: transform .2s; }
+    .service-card:hover .svc-cta { gap: .7rem; }
+    .service-card:hover .svc-cta svg { transform: translateX(3px); }
+
+    /* ═══════════════ MODAL DRAWER ═══════════════ */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(23,20,16,.45);
+      z-index: 1000;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .35s ease;
+      backdrop-filter: blur(2px);
+      -webkit-backdrop-filter: blur(2px);
+    }
+    .modal-overlay.open { opacity: 1; pointer-events: all; }
+
+    .modal-panel {
+      position: fixed;
+      top: 0; right: 0; bottom: 0;
+      width: min(580px, 100vw);
+      background: var(--bg);
+      z-index: 1001;
+      transform: translateX(100%);
+      transition: transform .4s cubic-bezier(.25,.8,.25,1);
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+    }
+    .modal-panel.open { transform: translateX(0); }
+
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 2.5rem 2.5rem 0;
+      position: sticky;
+      top: 0;
+      background: var(--bg);
+      z-index: 2;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--border-lt);
+    }
+    .modal-eyebrow {
+      font-family: 'Cormorant SC', serif;
+      font-size: .65rem;
+      letter-spacing: .3em;
+      text-transform: uppercase;
+      color: var(--sage);
+      margin-bottom: .5rem;
+    }
+    .modal-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.85rem,4vw,2.6rem);
+      font-weight: 300;
+      color: var(--text);
+      line-height: 1.1;
+    }
+    .modal-close {
+      background: none;
+      border: 1px solid var(--border);
+      width: 2.25rem;
+      height: 2.25rem;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: .85rem;
+      color: var(--text-soft);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-left: 1rem;
+      transition: border-color .2s, color .2s;
+      margin-top: .25rem;
+    }
+    .modal-close:hover { border-color: var(--text); color: var(--text); }
+
+    .modal-body { padding: 2rem 2.5rem; flex: 1; }
+
+    .modal-image {
+      width: 100%;
+      aspect-ratio: 16/7;
+      border-radius: 4px;
+      overflow: hidden;
+      margin-bottom: 2rem;
+    }
+    .modal-image img { width: 100%; height: 100%; object-fit: cover; }
+    .modal-image-placeholder {
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, var(--bg-stone) 0%, var(--bg-warm) 100%);
+    }
+
+    .modal-intro {
+      font-size: 1rem;
+      line-height: 1.82;
+      color: var(--text-mid);
+      margin-bottom: 2rem;
+    }
+
+    .modal-section-title {
+      font-family: 'Cormorant SC', serif;
+      font-size: .65rem;
+      letter-spacing: .28em;
+      text-transform: uppercase;
+      color: var(--text-soft);
+      margin-bottom: 1rem;
+      margin-top: 2rem;
+    }
+
+    .modal-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: .7rem;
+    }
+    .modal-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: .75rem;
+      font-size: .9rem;
+      color: var(--text-mid);
+      line-height: 1.6;
+    }
+    .modal-list li::before {
+      content: '';
+      width: 4px;
+      height: 4px;
+      background: var(--sage);
+      border-radius: 50%;
+      flex-shrink: 0;
+      margin-top: .6rem;
+    }
+
+    .modal-note {
+      margin-top: 2rem;
+      padding: 1.25rem;
+      background: var(--bg-sage);
+      border-radius: 4px;
+      border-left: 2px solid var(--sage);
+      font-size: .88rem;
+      color: var(--text-mid);
+      line-height: 1.7;
+    }
+    .modal-note strong {
+      display: block;
+      font-size: .65rem;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--sage);
+      font-weight: 500;
+      margin-bottom: .4rem;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .modal-schedule { margin-top: 1.5rem; display: flex; flex-direction: column; gap: .75rem; }
+    .modal-class-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: .85rem 1rem;
+      background: var(--white);
+      border: 1px solid var(--border-lt);
+      border-radius: 4px;
+    }
+    .modal-class-name { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 400; }
+    .modal-class-time { font-size: .8rem; color: var(--text-soft); margin-top: .1rem; }
+    .modal-class-price {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.4rem;
+      color: var(--sage);
+    }
+
+    .modal-footer {
+      padding: 1.75rem 2.5rem;
+      border-top: 1px solid var(--border-lt);
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+    .modal-footer .btn-primary { flex: 1; justify-content: center; }
+
+    /* ═══════════════ CLASSES ═══════════════ */
+    .classes { padding: clamp(5rem,10vw,9rem) 0; }
+    .classes-inner {
+      display: grid;
+      grid-template-columns: 1fr 1.15fr;
+      gap: clamp(3rem,7vw,6rem);
+      align-items: start;
+    }
+    .classes-text .section-label { margin-bottom: 2rem; }
+    .classes-title { font-size: clamp(2.4rem,5vw,3.75rem); font-weight: 300; margin-bottom: 1.25rem; }
+    .classes-title em { font-style: italic; color: var(--sage); }
+    .classes-desc { font-size: .95rem; color: var(--text-mid); line-height: 1.82; margin-bottom: 2rem; }
+
+    .classes-venue {
+      display: flex;
+      align-items: flex-start;
+      gap: .85rem;
+      padding: 1.2rem 1.4rem;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      background: var(--bg-warm);
+    }
+    .classes-venue svg { flex-shrink: 0; margin-top: 2px; color: var(--sage); }
+    .venue-name { font-size: .85rem; font-weight: 500; color: var(--text); margin-bottom: .2rem; }
+    .venue-addr { font-size: .8rem; color: var(--text-soft); line-height: 1.6; }
+
+    .class-cards { display: flex; flex-direction: column; gap: 1rem; }
+    .class-card {
+      display: grid;
+      grid-template-columns: 3.5rem 1fr auto;
+      gap: 1.5rem;
+      align-items: center;
+      padding: 1.5rem 1.75rem;
+      background: var(--bg-warm);
+      border: 1px solid var(--border-lt);
+      border-radius: 6px;
+      transition: box-shadow .25s, transform .25s;
+    }
+    .class-card:hover { box-shadow: var(--shadow-sm); transform: translateY(-2px); }
+    .class-day {
+      width: 3.5rem;
+      height: 3.5rem;
+      background: var(--sage);
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: var(--white);
+      flex-shrink: 0;
+    }
+    .class-day-abbr { font-size: .58rem; letter-spacing: .08em; text-transform: uppercase; font-weight: 500; opacity: .75; }
+    .class-day-word { font-family: 'Cormorant Garamond', serif; font-size: .95rem; font-weight: 400; line-height: 1; }
+    .class-name { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-weight: 400; color: var(--text); margin-bottom: .2rem; }
+    .class-time { font-size: .78rem; color: var(--text-soft); }
+    .class-price { font-family: 'Cormorant Garamond', serif; font-size: 1.9rem; font-weight: 300; color: var(--sage); text-align: right; line-height: 1; }
+    .class-price small { display: block; font-family: 'Inter', sans-serif; font-size: .62rem; letter-spacing: .1em; text-transform: uppercase; color: var(--text-soft); margin-top: .2rem; font-weight: 300; }
+
+    /* ═══════════════ NADIA QUOTE STRIP ═══════════════ */
+    .nadia-strip {
+      padding: clamp(3rem,6vw,5rem) 0;
+      background: var(--bg-sage);
+    }
+    .nadia-strip-inner {
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+    }
+    .nadia-strip-photo {
+      width: 5rem;
+      height: 5rem;
+      border-radius: 50%;
+      overflow: hidden;
+      flex-shrink: 0;
+      border: 3px solid var(--white);
+      box-shadow: var(--shadow-sm);
+    }
+    .nadia-strip-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+    }
+    .nadia-strip-photo-placeholder {
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, #C8D4C8 0%, #B8C8B8 100%);
+    }
+    .nadia-strip-quote {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.1rem, 2.5vw, 1.6rem);
+      font-style: italic;
+      color: var(--text-mid);
+      line-height: 1.5;
+      flex: 1;
+    }
+    .nadia-strip-attr {
+      font-size: .7rem;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--sage);
+      margin-top: .6rem;
+    }
+
+    /* ═══════════════ EVENTS ═══════════════ */
+    .events { padding: clamp(5rem,10vw,9rem) 0; background: var(--bg-dark); }
+    .events-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin-bottom: clamp(3rem,6vw,5rem);
+    }
+    .events-header .eyebrow { color: rgba(255,255,255,.32); }
+    .events-header .section-label::before { background: var(--sage-lt); }
+    .events-title { font-size: clamp(2.4rem,5vw,4rem); font-weight: 300; color: var(--white); margin-top: .75rem; }
+    .events-title em { font-style: italic; color: var(--sage-lt); }
+    .events-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+    .event-card {
+      border: 1px solid rgba(255,255,255,.07);
+      border-radius: 6px;
+      padding: clamp(2rem,4vw,3rem);
+      background: var(--bg-dark2);
+      position: relative;
+      overflow: hidden;
+      transition: border-color .3s;
+    }
+    .event-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--sage), transparent 70%);
+    }
+    .event-card:hover { border-color: rgba(163,191,171,.3); }
+    .event-date { display: flex; align-items: baseline; gap: .6rem; margin-bottom: 1.5rem; }
+    .event-day-num { font-family: 'Cormorant Garamond', serif; font-size: 4.5rem; font-weight: 300; color: var(--white); line-height: 1; }
+    .event-month-wrap { display: flex; flex-direction: column; }
+    .event-month { font-family: 'Cormorant SC', serif; font-size: .88rem; letter-spacing: .2em; color: var(--sage-lt); }
+    .event-year { font-size: .72rem; color: rgba(255,255,255,.25); letter-spacing: .1em; }
+    .event-name { font-family: 'Cormorant Garamond', serif; font-size: 1.85rem; font-weight: 300; color: var(--white); margin-bottom: 1rem; line-height: 1.2; }
+    .event-meta { display: flex; flex-direction: column; gap: .5rem; margin-bottom: 2rem; }
+    .event-meta-row { display: flex; align-items: center; gap: .6rem; font-size: .82rem; color: rgba(255,255,255,.45); }
+    .event-meta-row svg { color: var(--sage-lt); flex-shrink: 0; }
+    .event-footer { display: flex; align-items: center; justify-content: space-between; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,.06); }
+    .event-price { font-family: 'Cormorant Garamond', serif; font-size: 2.4rem; font-weight: 300; color: var(--white); line-height: 1; }
+    .event-price small { display: block; font-family: 'Inter', sans-serif; font-size: .62rem; letter-spacing: .1em; text-transform: uppercase; color: rgba(255,255,255,.28); margin-top: .25rem; font-weight: 300; }
+    .btn-event { font-size: .7rem; font-weight: 500; letter-spacing: .15em; text-transform: uppercase; color: var(--bg-dark); background: var(--sage-lt); padding: .75rem 1.5rem; border-radius: 2px; transition: background .25s; display: inline-block; }
+    .btn-event:hover { background: var(--white); }
+
+    /* ═══════════════ TESTIMONIAL ═══════════════ */
+    .testimonial { padding: clamp(5rem,10vw,9rem) 0; background: var(--bg-stone); text-align: center; }
+    .testimonial-mark { font-family: 'Cormorant Garamond', serif; font-size: 7rem; line-height: .5; color: var(--sage-lt); margin-bottom: 2rem; }
+    .testimonial-text { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.5rem,3.5vw,2.6rem); font-weight: 300; font-style: italic; color: var(--text); max-width: 34ch; margin: 0 auto 2rem; line-height: 1.4; }
+    .testimonial-rule { width: 2rem; height: 1px; background: var(--sage-lt); margin: 0 auto 1.1rem; }
+    .testimonial-author { font-size: .7rem; letter-spacing: .22em; text-transform: uppercase; color: var(--sage); font-weight: 500; }
+
+    /* ═══════════════ CONTACT ═══════════════ */
+    .contact { padding: clamp(5rem,10vw,9rem) 0; }
+    .contact-inner { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(3rem,8vw,7rem); align-items: start; }
+    .contact-info .section-label { margin-bottom: 2rem; }
+    .contact-title { font-size: clamp(2.4rem,5vw,3.75rem); font-weight: 300; margin-bottom: 1.25rem; }
+    .contact-title em { font-style: italic; color: var(--sage); }
+    .contact-desc { font-size: .97rem; color: var(--text-mid); line-height: 1.82; margin-bottom: 2.5rem; }
+    .contact-details { display: flex; flex-direction: column; gap: 1.4rem; }
+    .contact-row { display: flex; align-items: flex-start; gap: 1rem; }
+    .contact-icon { width: 2.25rem; height: 2.25rem; background: var(--bg-sage); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--sage); flex-shrink: 0; }
+    .contact-label { font-size: .65rem; letter-spacing: .15em; text-transform: uppercase; color: var(--text-soft); margin-bottom: .2rem; }
+    .contact-value { font-size: .95rem; color: var(--text); }
+    .contact-value a { color: var(--sage); transition: color .2s; }
+    .contact-value a:hover { color: var(--text); }
+
+    /* Nadia mini profile in contact */
+    .contact-nadia {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-top: 2.5rem;
+      padding: 1.25rem;
+      background: var(--bg-warm);
+      border-radius: 6px;
+      border: 1px solid var(--border-lt);
+    }
+    .contact-nadia-photo {
+      width: 3.5rem;
+      height: 3.5rem;
+      border-radius: 50%;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+    .contact-nadia-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+    .contact-nadia-photo-ph { width: 100%; height: 100%; background: var(--bg-stone); }
+    .contact-nadia-name { font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; font-weight: 400; margin-bottom: .1rem; }
+    .contact-nadia-role { font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; color: var(--sage); }
+
+    /* Form */
+    .contact-form { background: var(--bg-warm); border: 1px solid var(--border-lt); border-radius: 8px; padding: clamp(2rem,5vw,3.5rem); }
+    .form-heading { font-family: 'Cormorant Garamond', serif; font-size: 1.85rem; font-weight: 400; margin-bottom: .4rem; }
+    .form-sub { font-size: .82rem; color: var(--text-soft); margin-bottom: 2rem; }
+    .form-group { margin-bottom: 1.2rem; }
+    .form-row-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .form-label { display: block; font-size: .65rem; letter-spacing: .15em; text-transform: uppercase; color: var(--text-mid); margin-bottom: .45rem; }
+    .form-input, .form-select, .form-textarea { width: 100%; background: var(--white); border: 1px solid var(--border); border-radius: 4px; padding: .85rem 1rem; font-family: 'Inter', sans-serif; font-size: .9rem; font-weight: 300; color: var(--text); transition: border-color .2s; -webkit-appearance: none; appearance: none; }
+    .form-input:focus, .form-select:focus, .form-textarea:focus { outline: none; border-color: var(--sage); }
+    .form-textarea { resize: vertical; min-height: 110px; }
+    .form-submit { width: 100%; background: var(--sage); color: var(--white); border: none; border-radius: 4px; padding: 1rem 2rem; font-family: 'Inter', sans-serif; font-size: .75rem; font-weight: 500; letter-spacing: .15em; text-transform: uppercase; cursor: pointer; transition: background .25s; margin-top: .5rem; }
+    .form-submit:hover { background: var(--text); }
+
+    /* ═══════════════ FOOTER ═══════════════ */
+    footer { background: var(--bg-dark); color: rgba(255,255,255,.45); padding: clamp(4rem,8vw,6rem) 0 2.5rem; }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 4rem; margin-bottom: 4rem; }
+    .footer-brand-name { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 300; color: var(--white); margin-bottom: .75rem; }
+    .footer-brand-desc { font-size: .84rem; line-height: 1.75; margin-bottom: 1.75rem; }
+    .footer-social { display: flex; gap: .75rem; }
+    .footer-social a { width: 2rem; height: 2rem; border: 1px solid rgba(255,255,255,.12); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,.38); transition: border-color .2s, color .2s; }
+    .footer-social a:hover { border-color: var(--sage-lt); color: var(--sage-lt); }
+    .footer-col-title { font-size: .62rem; letter-spacing: .28em; text-transform: uppercase; color: rgba(255,255,255,.2); margin-bottom: 1.5rem; }
+    .footer-links { list-style: none; display: flex; flex-direction: column; gap: .65rem; }
+    .footer-links a { font-size: .87rem; color: rgba(255,255,255,.42); transition: color .2s; }
+    .footer-links a:hover { color: rgba(255,255,255,.8); }
+    .footer-bottom { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,.05); }
+    .footer-copy { font-size: .72rem; color: rgba(255,255,255,.22); }
+    .footer-email a { font-size: .78rem; color: var(--sage-lt); transition: color .2s; }
+    .footer-email a:hover { color: var(--white); }
+
+    /* ═══════════════ SCROLL REVEAL ═══════════════ */
+    .reveal     { opacity: 0; transform: translateY(26px); transition: opacity .7s ease, transform .7s ease; }
+    .reveal-l   { opacity: 0; transform: translateX(-26px); transition: opacity .7s ease, transform .7s ease; }
+    .reveal-r   { opacity: 0; transform: translateX(26px);  transition: opacity .7s ease, transform .7s ease; }
+    .reveal-sc  { opacity: 0; transform: scale(.96);         transition: opacity .6s ease, transform .6s ease; }
+    .reveal.on, .reveal-l.on, .reveal-r.on, .reveal-sc.on { opacity: 1; transform: none; }
+    [data-d="1"] { transition-delay: .08s; }
+    [data-d="2"] { transition-delay: .16s; }
+    [data-d="3"] { transition-delay: .24s; }
+    [data-d="4"] { transition-delay: .32s; }
+    [data-d="5"] { transition-delay: .40s; }
+    [data-d="6"] { transition-delay: .48s; }
+
+    /* ═══════════════ RESPONSIVE ═══════════════ */
+    @media (max-width: 1024px) {
+      .services-grid { grid-template-columns: 1fr 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .footer-grid > div:first-child { grid-column: 1/-1; }
+      .about-inner { gap: 3rem; }
+      .classes-inner { gap: 3rem; }
+      .contact-inner { gap: 3rem; }
+    }
+
+    @media (max-width: 768px) {
+      /* Nav */
+      .nav-links { display: none; }
+      .nav-hamburger { display: flex; }
+
+      /* Hero — single column, image shown below text */
+      .hero-inner {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 2.5rem;
+        padding-top: clamp(6rem, 18vw, 8rem);
+        padding-bottom: 4rem;
+      }
+      .hero-eyebrow, .hero-tags, .hero-actions { justify-content: center; }
+      .hero-subtitle { margin: 0 auto 2.5rem; }
+      .hero-visual { display: block; }
+      .hero-img-frame { aspect-ratio: 4/3; max-height: 320px; }
+      .hero-visual::after { display: none; }
+      .hero-badge { left: 50%; transform: translateX(-50%); bottom: -1.25rem; }
+      .hero-scroll { display: none; }
+
+      /* About — single column, photo shown full-width */
+      .about-inner { grid-template-columns: 1fr; gap: 2rem; }
+      .about-photos {
+        display: block;
+        position: relative;
+        height: clamp(280px, 70vw, 420px);
+        width: 100%;
+        margin-bottom: 1rem;
+      }
+      .about-float { display: none; }
+
+      /* Services */
+      .services-grid { grid-template-columns: 1fr; }
+
+      /* Classes */
+      .classes-inner { grid-template-columns: 1fr; }
+
+      /* Events */
+      .events-grid { grid-template-columns: 1fr; }
+
+      /* Contact */
+      .contact-inner { grid-template-columns: 1fr; }
+
+      /* Footer */
+      .footer-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .footer-grid > div:first-child { grid-column: auto; }
+
+      /* Form */
+      .form-row-2 { grid-template-columns: 1fr; }
+
+      /* Modal */
+      .modal-panel { width: 100vw; }
+      .modal-header, .modal-body, .modal-footer { padding-left: 1.5rem; padding-right: 1.5rem; }
+
+      /* Nadia strip */
+      .nadia-strip-inner { flex-direction: column; text-align: center; gap: 1.5rem; }
+
+      /* Intro strip */
+      .intro-strip-inner { gap: 0 1.5rem; }
+    }
+
+    @media (max-width: 480px) {
+      .hero-title { font-size: 2.75rem; }
+      .hero-img-frame { aspect-ratio: 1/1; max-height: 260px; }
+      .class-card { grid-template-columns: auto 1fr; grid-template-rows: auto auto; gap: 1rem; }
+      .class-price { grid-column: 2; text-align: left; }
+      .event-day-num { font-size: 3.5rem; }
+      .testimonial-text { font-size: 1.4rem; }
+      .modal-header { padding-top: 1.75rem; }
+      .services-header .services-title { font-size: 2rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══ NAVIGATION ═══ -->
+<nav id="mainNav">
+  <div class="nav-inner">
+    <a href="#home" class="nav-logo">
+      <!--
+        LOGO: Replace the text below with your actual logo:
+        <img src="assets/logo.png" alt="Breath4Mind" style="height:44px;width:auto;">
+      -->
+      <div class="nav-logo-text">Breath<em>4</em>Mind</div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#classes">Classes</a></li>
+      <li><a href="#events">Events</a></li>
+      <li><a href="#contact" class="nav-cta">Book a Session</a></li>
+    </ul>
+    <button class="nav-hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="nav-mobile" id="mobileMenu">
+  <button class="nav-mobile-close" id="mobileClose">Close ✕</button>
+  <a href="#about"    onclick="closeMenu()">About</a>
+  <a href="#services" onclick="closeMenu()">Services</a>
+  <a href="#classes"  onclick="closeMenu()">Classes</a>
+  <a href="#events"   onclick="closeMenu()">Events</a>
+  <a href="#contact"  onclick="closeMenu()">Book a Session</a>
+</div>
+
+
+<!-- ═══ HERO ═══ -->
+<section class="hero" id="home">
+  <div class="hero-inner">
+    <div class="hero-text">
+      <div class="hero-eyebrow"><span class="eyebrow">Tonbridge · Kent</span></div>
+      <h1 class="hero-title">Find Your<br><em>Inner Peace</em></h1>
+      <p class="hero-subtitle">
+        Helping you reconnect with yourself through breathwork, mindfulness,
+        and holistic wellness practices that calm your nervous system and restore balance.
+      </p>
+      <div class="hero-tags">
+        <span class="hero-tag">Breathwork</span>
+        <span class="hero-tag">Mindfulness</span>
+        <span class="hero-tag">Pilates</span>
+        <span class="hero-tag">Gong Baths</span>
+        <span class="hero-tag">Nervous System</span>
+      </div>
+      <div class="hero-actions">
+        <a href="#contact" class="btn-primary">Book a Session</a>
+        <a href="#services" class="btn-outline">Explore Practices</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-img-frame">
+        <img src="assets/bowls.jpg" alt="Crystal singing bowls – Breath4Mind"
+             onerror="this.style.display='none';this.parentElement.style.background='radial-gradient(ellipse at 45% 28%,rgba(120,148,127,.22) 0%,transparent 55%),linear-gradient(175deg,#CCD1CB 0%,#B8C2B7 45%,#C4C9BE 100%)'">
+      </div>
+      <div class="hero-badge">
+        <div class="hero-badge-label">Based in</div>
+        <div class="hero-badge-value">Tonbridge, Kent</div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <span>Scroll</span>
+    <div class="hero-scroll-line"></div>
+  </div>
+</section>
+
+
+<!-- ═══ INTRO STRIP ═══ -->
+<div class="intro-strip">
+  <div class="intro-strip-inner">
+    <span class="strip-item">Breathwork</span><span class="strip-dot">·</span>
+    <span class="strip-item">Mindfulness</span><span class="strip-dot">·</span>
+    <span class="strip-item">Nervous System Regulation</span><span class="strip-dot">·</span>
+    <span class="strip-item">Pilates</span><span class="strip-dot">·</span>
+    <span class="strip-item">Gong Baths</span><span class="strip-dot">·</span>
+    <span class="strip-item">Corporate Wellness</span>
+  </div>
+</div>
+
+
+<!-- ═══ ABOUT ═══ -->
+<section class="about" id="about">
+  <div class="container">
+    <div class="about-inner">
+
+      <!-- Two-photo composition -->
+      <div class="about-photos reveal-l">
+        <!-- Nadia's portrait — large, left -->
+        <div class="about-photo-nadia">
+          <img src="assets/nadia.jpg" alt="Nadia – Breath4Mind practitioner"
+               onerror="this.style.display='none'">
+        </div>
+        <!-- Singing bowls — smaller, bottom-right, overlapping -->
+        <div class="about-photo-bowls">
+          <img src="assets/bowls.jpg" alt="Crystal singing bowls – Breath4Mind"
+               onerror="this.style.display='none'">
+        </div>
+        <!-- Floating card -->
+        <div class="about-float">
+          <div class="about-float-sym">∞</div>
+          <div class="about-float-text">Your peace awaits</div>
+        </div>
+      </div>
+
+      <!-- Text -->
+      <div class="about-text reveal-r">
+        <div class="section-label"><span class="eyebrow">About Nadia</span></div>
+        <h2 class="about-title">A <em>guide</em> to your<br>inner landscape</h2>
+        <p class="about-body">
+          Welcome to Breath4Mind. I'm Nadia, a wellness practitioner based in Tonbridge, Kent,
+          dedicated to helping you discover the profound power of your own breath, body, and mind.
+        </p>
+        <blockquote class="about-pullquote">
+          "Helping you to find your inner peace."
+        </blockquote>
+        <p class="about-body">
+          Through breathwork, mindfulness, nervous system regulation, Pilates, and Gong Baths,
+          I offer a holistic approach to wellbeing — whether you're managing stress, seeking deeper
+          self-awareness, or simply looking for a sanctuary of calm in your week.
+        </p>
+        <p class="about-body">
+          My sessions are available for individuals, groups, corporate teams, and schools —
+          creating accessible wellness experiences that meet you exactly where you are.
+        </p>
+        <div class="about-tags">
+          <span class="about-tag">Breathwork</span>
+          <span class="about-tag">Mindfulness</span>
+          <span class="about-tag">Nervous System</span>
+          <span class="about-tag">Pilates</span>
+          <span class="about-tag">Gong Baths</span>
+          <span class="about-tag">Corporate Wellness</span>
+          <span class="about-tag">Schools</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══ SERVICES ═══ -->
+<section class="services" id="services">
+  <div class="container">
+    <div class="services-header reveal">
+      <div class="section-label"><span class="eyebrow">What I Offer</span></div>
+      <h2 class="services-title">Practices to <em>restore</em><br>and reconnect</h2>
+      <p class="services-sub">
+        Click any practice to learn more — each one is an invitation to return to yourself,
+        breathe deeper, and live with greater ease.
+      </p>
+    </div>
+
+    <div class="services-grid">
+
+      <div class="service-card reveal" data-d="1" onclick="openModal('mindfulness')" role="button" tabindex="0" aria-label="Learn more about Mindfulness">
+        <svg class="svc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25">
+          <circle cx="12" cy="12" r="3"/>
+          <path d="M12 1v3M12 20v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M1 12h3M20 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/>
+        </svg>
+        <h3 class="svc-name">Mindfulness</h3>
+        <p class="svc-desc">Learn to cultivate present-moment awareness and find calm amidst the busyness of daily life. Suitable for all levels.</p>
+        <span class="svc-badge">✦ Corporate Events Available</span>
+        <div class="svc-cta">Learn more <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+      </div>
+
+      <div class="service-card reveal" data-d="2" onclick="openModal('breathwork')" role="button" tabindex="0" aria-label="Learn more about Breathwork">
+        <svg class="svc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25">
+          <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/>
+          <path d="M8 12a4 4 0 0 1 8 0"/><path d="M12 8v4"/>
+        </svg>
+        <h3 class="svc-name">Breathwork</h3>
+        <p class="svc-desc">Harness the transformative power of conscious breathing. Reduce anxiety, build resilience, and access deeper clarity.</p>
+        <span class="svc-badge">✦ Breathwork for Schools</span>
+        <div class="svc-cta">Learn more <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+      </div>
+
+      <div class="service-card reveal" data-d="3" onclick="openModal('pilates')" role="button" tabindex="0" aria-label="Learn more about Pilates">
+        <svg class="svc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25">
+          <path d="M12 2a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"/>
+          <path d="M8 8h8l-1 6H9L8 8z"/>
+          <path d="M8 22l1-4h6l1 4"/>
+          <path d="M6 12l-2 4M18 12l2 4"/>
+        </svg>
+        <h3 class="svc-name">Pilates</h3>
+        <p class="svc-desc">Strengthen your core, improve posture, and move with grace. Gentle classes suitable for all levels including beginners.</p>
+        <span class="svc-badge">✦ Classes from £10</span>
+        <div class="svc-cta">Learn more <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+      </div>
+
+      <div class="service-card reveal" data-d="4" onclick="openModal('nervoussystem')" role="button" tabindex="0" aria-label="Learn more about Nervous System Regulation">
+        <svg class="svc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25">
+          <path d="M4.5 9.5a7.5 7.5 0 1 1 15 0"/>
+          <path d="M12 9.5V22"/><path d="M9 14h6M8 18h8"/>
+        </svg>
+        <h3 class="svc-name">Nervous System Regulation</h3>
+        <p class="svc-desc">Shift from stress and survival into rest, recovery, and lasting resilience using somatic and polyvagal-informed practices.</p>
+        <span class="svc-badge">✦ Individual &amp; Group Sessions</span>
+        <div class="svc-cta">Learn more <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+      </div>
+
+      <div class="service-card reveal" data-d="5" onclick="openModal('gongbath')" role="button" tabindex="0" aria-label="Learn more about Gong Baths">
+        <svg class="svc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25">
+          <circle cx="12" cy="12" r="9"/>
+          <circle cx="12" cy="12" r="5"/>
+          <circle cx="12" cy="12" r="2"/>
+          <path d="M3 12h2M19 12h2M12 3v2M12 19v2"/>
+        </svg>
+        <h3 class="svc-name">Gong Baths</h3>
+        <p class="svc-desc">Surrender to deep healing through the immersive vibrations of the gong. A profoundly relaxing sound journey that resets body and mind.</p>
+        <span class="svc-badge">✦ Group Events · £25 per person</span>
+        <div class="svc-cta">Learn more <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+      </div>
+
+      <div class="service-card reveal" data-d="6" onclick="openModal('online')" role="button" tabindex="0" aria-label="Learn more about Online Classes">
+        <svg class="svc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25">
+          <rect x="2" y="3" width="20" height="14" rx="2"/>
+          <path d="M8 21h8M12 17v4"/>
+          <path d="M10 10l5-2.5L10 5v5z" fill="currentColor" stroke="none" opacity=".4"/>
+        </svg>
+        <h3 class="svc-name">Online Classes</h3>
+        <p class="svc-desc">Access mindfulness, breathwork, and meditation practices from wherever you are. Live and flexible sessions available online.</p>
+        <span class="svc-badge">✦ Online · Flexible Scheduling</span>
+        <div class="svc-cta">Learn more <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══ MODAL DRAWER ═══ -->
+<div class="modal-overlay" id="modalOverlay" onclick="closeModal()"></div>
+<div class="modal-panel" id="modalPanel" role="dialog" aria-modal="true">
+  <div class="modal-header">
+    <div>
+      <div class="modal-eyebrow" id="modalEyebrow"></div>
+      <h2 class="modal-title" id="modalTitle"></h2>
+    </div>
+    <button class="modal-close" onclick="closeModal()" aria-label="Close">✕</button>
+  </div>
+  <div class="modal-body" id="modalBody"></div>
+  <div class="modal-footer">
+    <a href="#contact" class="btn-primary" onclick="closeModal()">Book a Session with Nadia</a>
+  </div>
+</div>
+
+
+<!-- ═══ CLASSES ═══ -->
+<section class="classes" id="classes">
+  <div class="container">
+    <div class="classes-inner">
+      <div class="classes-text reveal-l">
+        <div class="section-label"><span class="eyebrow">Weekly Schedule</span></div>
+        <h2 class="classes-title"><em>Pilates</em><br>Classes</h2>
+        <p class="classes-desc">
+          Join our regular Pilates sessions in a warm, welcoming environment.
+          Whether you're just starting out or looking to deepen your practice,
+          there's a class for you. Suitable for all levels — come as you are.
+        </p>
+        <div class="classes-venue">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+            <circle cx="12" cy="10" r="3"/>
+          </svg>
+          <div>
+            <div class="venue-name">Tonbridge Rugby Club</div>
+            <div class="venue-addr">Tonbridge Juddians RFC, The Slade<br>Tonbridge, TN9 1HR</div>
+          </div>
+        </div>
+      </div>
+      <div class="class-cards reveal-r">
+
+        <div class="class-card">
+          <div class="class-day">
+            <span class="class-day-abbr">Day</span>
+            <span class="class-day-word">Mon</span>
+          </div>
+          <div>
+            <div class="class-name">Gentle Pilates</div>
+            <div class="class-time">9:30 AM — 10:30 AM</div>
+          </div>
+          <div class="class-price">£10<small>per class</small></div>
+        </div>
+
+        <div class="class-card">
+          <div class="class-day" style="background:var(--accent)">
+            <span class="class-day-abbr">Day</span>
+            <span class="class-day-word">Wed</span>
+          </div>
+          <div>
+            <div class="class-name">Evening Pilates</div>
+            <div class="class-time">6:30 PM — 7:30 PM</div>
+          </div>
+          <div class="class-price">£10<small>per class</small></div>
+        </div>
+
+        <a href="#contact" class="btn-primary" style="justify-content:center;margin-top:.5rem;">Reserve Your Spot</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══ NADIA QUOTE STRIP ═══ -->
+<div class="nadia-strip">
+  <div class="container">
+    <div class="nadia-strip-inner">
+      <div class="nadia-strip-photo">
+        <img src="assets/nadia.jpg" alt="Nadia"
+             onerror="this.style.display='none';this.parentElement.innerHTML='<div class=nadia-strip-photo-placeholder></div>'">
+      </div>
+      <div>
+        <div class="nadia-strip-quote">
+          "I believe every one of us has an innate capacity to heal, to rest, and to find our way back to ourselves. My role is simply to guide you home."
+        </div>
+        <div class="nadia-strip-attr">— Nadia, Breath4Mind</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══ EVENTS ═══ -->
+<section class="events" id="events">
+  <div class="container">
+    <div class="events-header">
+      <div>
+        <div class="section-label"><span class="eyebrow">Upcoming</span></div>
+        <h2 class="events-title">Gong Bath<br><em>Events</em></h2>
+      </div>
+      <a href="#contact" class="btn-primary">Enquire &amp; Book</a>
+    </div>
+    <div class="events-grid">
+
+      <div class="event-card reveal" data-d="1">
+        <div class="event-date">
+          <div class="event-day-num">26</div>
+          <div class="event-month-wrap">
+            <span class="event-month">April</span>
+            <span class="event-year">2025</span>
+          </div>
+        </div>
+        <h3 class="event-name">Gong Bath &amp;<br>Breathwork</h3>
+        <div class="event-meta">
+          <div class="event-meta-row">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+            </svg>
+            Sunday · 5:00 PM — 6:30 PM
+          </div>
+          <div class="event-meta-row">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
+            </svg>
+            Market House, Tonbridge
+          </div>
+        </div>
+        <div class="event-footer">
+          <div class="event-price">£25<small>per person</small></div>
+          <a href="#contact" class="btn-event">Book Now</a>
+        </div>
+      </div>
+
+      <div class="event-card reveal" data-d="2">
+        <div class="event-date">
+          <div class="event-day-num">17</div>
+          <div class="event-month-wrap">
+            <span class="event-month">May</span>
+            <span class="event-year">2025</span>
+          </div>
+        </div>
+        <h3 class="event-name">Gong Bath &amp;<br>Breathwork</h3>
+        <div class="event-meta">
+          <div class="event-meta-row">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+            </svg>
+            Sunday · 5:00 PM — 6:30 PM
+          </div>
+          <div class="event-meta-row">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
+            </svg>
+            Market House, Tonbridge
+          </div>
+        </div>
+        <div class="event-footer">
+          <div class="event-price">£25<small>per person</small></div>
+          <a href="#contact" class="btn-event">Book Now</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══ TESTIMONIAL ═══ -->
+<section class="testimonial">
+  <div class="container">
+    <div class="reveal">
+      <div class="testimonial-mark">"</div>
+      <p class="testimonial-text">
+        The relaxation part was incredible — I felt my chest fill with gratitude.
+        I left with a sense of clarity and deep connection that I hadn't experienced in months.
+      </p>
+      <div class="testimonial-rule"></div>
+      <div class="testimonial-author">Anne — Breath4Mind Client</div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══ CONTACT ═══ -->
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="contact-inner">
+
+      <div class="contact-info reveal-l">
+        <div class="section-label"><span class="eyebrow">Get In Touch</span></div>
+        <h2 class="contact-title">Begin your<br><em>journey</em> today</h2>
+        <p class="contact-desc">
+          Ready to explore breathwork, mindfulness, or Pilates? I'd love to hear from you.
+          Reach out to book a session, ask a question, or discover how I can support
+          your wellbeing — I respond within 24–48 hours.
+        </p>
+        <div class="contact-details">
+          <div class="contact-row">
+            <div class="contact-icon">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.49 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.4 1.23h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.18 6.18l1.8-1.81a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+              </svg>
+            </div>
+            <div>
+              <div class="contact-label">Phone</div>
+              <div class="contact-value"><a href="tel:07759470140">07759 470 140</a></div>
+            </div>
+          </div>
+          <div class="contact-row">
+            <div class="contact-icon">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                <polyline points="22,6 12,13 2,6"/>
+              </svg>
+            </div>
+            <div>
+              <div class="contact-label">Email</div>
+              <div class="contact-value"><a href="mailto:nadia@breath4mind.com">nadia@breath4mind.com</a></div>
+            </div>
+          </div>
+          <div class="contact-row">
+            <div class="contact-icon">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+            </div>
+            <div>
+              <div class="contact-label">Location</div>
+              <div class="contact-value">Tonbridge Juddians RFC, The Slade<br>Tonbridge, TN9 1HR</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Nadia profile card -->
+        <div class="contact-nadia">
+          <div class="contact-nadia-photo">
+            <img src="assets/nadia.jpg" alt="Nadia"
+                 onerror="this.style.display='none';this.parentElement.innerHTML='<div class=contact-nadia-photo-ph></div>'">
+          </div>
+          <div>
+            <div class="contact-nadia-name">Nadia</div>
+            <div class="contact-nadia-role">Breath4Mind · Tonbridge, Kent</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form reveal-r">
+        <div class="form-heading">Book a Session</div>
+        <div class="form-sub">I'll get back to you within 24–48 hours</div>
+        <form onsubmit="handleForm(event)">
+          <div class="form-row-2">
+            <div class="form-group">
+              <label class="form-label" for="fname">First Name</label>
+              <input type="text" id="fname" class="form-input" placeholder="First name" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="lname">Last Name</label>
+              <input type="text" id="lname" class="form-input" placeholder="Last name" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="femail">Email Address</label>
+            <input type="email" id="femail" class="form-input" placeholder="your@email.com" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="fphone">Phone Number</label>
+            <input type="tel" id="fphone" class="form-input" placeholder="+44 (0)7...">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="fservice">I'm Interested In</label>
+            <select id="fservice" class="form-select">
+              <option value="">— Select a service —</option>
+              <option>Breathwork</option>
+              <option>Mindfulness</option>
+              <option>Pilates Classes</option>
+              <option>Nervous System Regulation</option>
+              <option>Gong Bath Event</option>
+              <option>Online Classes</option>
+              <option>Corporate / Schools Enquiry</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="fmessage">Your Message</label>
+            <textarea id="fmessage" class="form-textarea" placeholder="Tell me a little about yourself and what you're looking for..."></textarea>
+          </div>
+          <button type="submit" class="form-submit" id="formBtn">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand-name">Breath4Mind</div>
+        <p class="footer-brand-desc">Helping you find your inner peace through breathwork, mindfulness, Pilates, and holistic wellness in Tonbridge, Kent.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+          <a href="#" aria-label="LinkedIn"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a>
+          <a href="#" aria-label="Twitter"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Navigation</div>
+        <ul class="footer-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Nadia</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#classes">Pilates Classes</a></li>
+          <li><a href="#events">Events</a></li>
+          <li><a href="#contact">Contact &amp; Book</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Services</div>
+        <ul class="footer-links">
+          <li><a href="#services" onclick="openModal('breathwork')">Breathwork</a></li>
+          <li><a href="#services" onclick="openModal('mindfulness')">Mindfulness</a></li>
+          <li><a href="#classes">Pilates</a></li>
+          <li><a href="#services" onclick="openModal('nervoussystem')">Nervous System</a></li>
+          <li><a href="#services" onclick="openModal('gongbath')">Gong Baths</a></li>
+          <li><a href="#services" onclick="openModal('online')">Online Classes</a></li>
+          <li><a href="#contact">Corporate Events</a></li>
+          <li><a href="#contact">Schools</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2025 Breath4Mind · Nadia · Tonbridge, Kent · All rights reserved</div>
+      <div class="footer-email"><a href="mailto:nadia@breath4mind.com">nadia@breath4mind.com</a></div>
+    </div>
+  </div>
+</footer>
+
+
+<script>
+/* ── PRACTICE DATA FOR MODALS ── */
+const practices = {
+  mindfulness: {
+    eyebrow: 'Present · Aware · Calm',
+    title: 'Mindfulness',
+    intro: `Mindfulness is the practice of bringing your full attention to the present moment — to thoughts, feelings, body sensations, and the surrounding environment — with an attitude of gentle curiosity and openness.
+
+Working with Nadia, you'll learn practical mindfulness skills that can be woven into everyday life. Sessions are held in a warm, non-judgemental space and are suitable for complete beginners and those returning to practice.`,
+    sections: [
+      {
+        heading: 'Sessions Include',
+        items: [
+          'Guided meditation and present-moment awareness practices',
+          'Breathing techniques for focus and calm',
+          'Body scan and grounding exercises',
+          'Mindful movement and gentle yoga',
+          'Tools to manage stress and anxiety in daily life',
+          'Practical techniques to take home with you'
+        ]
+      },
+      {
+        heading: 'Benefits',
+        items: [
+          'Reduces stress, worry, and anxiety',
+          'Improves quality of sleep',
+          'Enhances emotional regulation and resilience',
+          'Increases self-awareness and clarity',
+          'Helps manage chronic pain and fatigue',
+          'Builds a sustainable daily self-care practice'
+        ]
+      }
+    ],
+    note: { heading: 'Also Available', text: 'Corporate mindfulness workshops tailored to your team — half-day and full-day sessions available. Online mindfulness classes also offered for those unable to attend in person.' }
+  },
+
+  breathwork: {
+    eyebrow: 'Breathe · Release · Restore',
+    title: 'Breathwork',
+    intro: `Breathwork uses conscious, connected breathing patterns to shift your physical, mental, and emotional state. It is one of the most profound and immediate tools available for self-healing — accessible to everyone, requiring nothing but your own breath.
+
+Sessions with Nadia are held in a safe and supported space, and can be experienced in person or online. Each session is gentle, guided, and deeply restorative.`,
+    sections: [
+      {
+        heading: 'What to Expect',
+        items: [
+          'Guided breathing sequences tailored to your needs',
+          'Breath-led relaxation and emotional release',
+          'Practices drawn from multiple breathwork traditions',
+          'Grounding and integration at the end of every session',
+          'A safe, non-judgmental space to explore at your own pace',
+          'Aftercare guidance and tools to practise at home'
+        ]
+      },
+      {
+        heading: 'Benefits',
+        items: [
+          'Reduces cortisol and stress hormones',
+          'Releases stored tension held in the body',
+          'Clears mental fog and increases mental clarity',
+          'Supports emotional healing and processing',
+          'Deepens self-awareness and inner connection',
+          'Promotes profound relaxation and inner peace'
+        ]
+      }
+    ],
+    note: { heading: 'Breathwork for Schools', text: 'Nadia also offers age-appropriate breathwork and mindfulness programmes for schools and young people — helping students manage stress, improve focus, and build emotional resilience.' }
+  },
+
+  pilates: {
+    eyebrow: 'Move · Strengthen · Align',
+    title: 'Pilates',
+    intro: `Nadia's Pilates classes are gentle, welcoming, and suitable for all levels — including complete beginners or anyone returning to movement after injury or time away from exercise.
+
+Classes focus on core strength, postural alignment, and moving with greater ease and body awareness. All exercises can be adapted to your individual needs. A gentle pace means you can ease back in without strain.`,
+    sections: [
+      {
+        heading: 'What to Bring',
+        items: [
+          'Comfortable clothing you can move freely in',
+          'A yoga mat (some mats available to borrow)',
+          'Water and a small towel',
+          'An open mind — all levels and abilities welcome'
+        ]
+      },
+      {
+        heading: 'Benefits',
+        items: [
+          'Strengthens core and postural muscles',
+          'Improves flexibility and range of motion',
+          'Relieves back pain and stiffness',
+          'Enhances body awareness and coordination',
+          'Suitable for all fitness levels and abilities',
+          'Supports recovery and rehabilitation'
+        ]
+      }
+    ],
+    schedule: true,
+    note: { heading: 'Location', text: 'Tonbridge Rugby Club (Tonbridge Juddians RFC), The Slade, Tonbridge, TN9 1HR. Free parking available.' }
+  },
+
+  nervoussystem: {
+    eyebrow: 'Rest · Regulate · Rebuild',
+    title: 'Nervous System Regulation',
+    intro: `Many of us move through life in a state of chronic stress — stuck in fight-or-flight, or feeling flat and disconnected. Nervous system regulation is the gentle, evidence-based practice of returning the body to a felt sense of safety and ease.
+
+Drawing on polyvagal-informed approaches and somatic practices, Nadia guides you through tools to better understand your own nervous system and develop lasting resilience.`,
+    sections: [
+      {
+        heading: 'Sessions Include',
+        items: [
+          'Polyvagal-informed education and practices',
+          'Somatic awareness and body-based grounding',
+          'Breathwork specifically for nervous system support',
+          'Gentle movement and restorative rest techniques',
+          'Co-regulation and connection practices',
+          'Practical everyday regulation tools'
+        ]
+      },
+      {
+        heading: 'Benefits',
+        items: [
+          'Reduces chronic stress and burnout',
+          'Improves sleep quality and depth',
+          'Enhances emotional resilience and stability',
+          'Supports trauma recovery and integration',
+          'Builds a felt sense of safety in the body',
+          'Increases energy, focus, and clarity'
+        ]
+      }
+    ],
+    note: { heading: 'Who is This For?', text: 'Anyone experiencing anxiety, burnout, overwhelm, sleep difficulties, or a sense of being "stuck" in stress or shutdown. Sessions are gentle and paced entirely to your comfort and needs.' }
+  },
+
+  gongbath: {
+    eyebrow: 'Sound · Healing · Peace',
+    title: 'Gong Baths',
+    intro: `A Gong Bath is an immersive sound healing experience in which you lie comfortably as the vibrations of the gong wash over and through you. No prior experience is needed — you simply arrive, lie back, and receive.
+
+Many people experience a deep sense of relaxation, emotional release, and profound inner stillness. The sound acts on every cell of the body, supporting your nervous system to release deeply held tension.`,
+    sections: [
+      {
+        heading: 'What to Bring',
+        items: [
+          'Yoga mat and a warm blanket to lie on',
+          'A pillow for your head and an eye mask if you prefer',
+          'Comfortable clothing you can lie in for 90 minutes',
+          'Arrive 5–10 minutes early to settle in',
+          'An open mind and a willingness to simply receive'
+        ]
+      },
+      {
+        heading: 'Benefits',
+        items: [
+          'Deep relaxation and profound stress relief',
+          'Reduces anxiety and quietens mental chatter',
+          'Promotes emotional release and processing',
+          'Supports better sleep and nervous system reset',
+          'Creates a sense of spaciousness and inner peace',
+          'Many people report clarity, joy, and a sense of renewal'
+        ]
+      }
+    ],
+    note: { heading: 'Upcoming Events', text: 'Sunday 26 April · 5:00–6:30 PM · Market House, Tonbridge · £25 per person\nSunday 17 May · 5:00–6:30 PM · Market House, Tonbridge · £25 per person\n\nContact Nadia to reserve your place: nadia@breath4mind.com · 07759 470 140' },
+    usesBowls: true
+  },
+
+  online: {
+    eyebrow: 'Anywhere · Anytime · You',
+    title: 'Online Classes',
+    intro: `Nadia's online sessions bring the same warmth, expertise, and gentle guidance of her in-person classes — directly to you, wherever you are in the world.
+
+Live sessions are run via video call and offer the same quality of connection and teaching as in-person experiences. Ideal for those who prefer to practise from home or who cannot attend in person.`,
+    sections: [
+      {
+        heading: 'Available Online',
+        items: [
+          'Live guided mindfulness and meditation classes',
+          'Breathwork sessions — individual and group',
+          'Nervous system regulation and somatic practices',
+          'Online Mindfulness classes — regular schedule available',
+          'Breathwork and Meditation Classes online',
+          'One-to-one sessions tailored to your needs'
+        ]
+      },
+      {
+        heading: 'Benefits of Online',
+        items: [
+          'No commute — practise from your own sacred space',
+          'Flexible scheduling around your lifestyle',
+          'Access Nadia\'s guidance from anywhere in the world',
+          'Same high-quality, personalised teaching',
+          'Perfect for busy schedules or those with mobility needs'
+        ]
+      }
+    ],
+    note: { heading: 'Getting Started', text: 'Sessions run via Zoom or your preferred video platform. Get in touch with Nadia to find out current scheduling, pricing, and availability for online sessions.' }
+  }
+};
+
+/* ── MODAL OPEN / CLOSE ── */
+function openModal(key) {
+  const p = practices[key];
+  if (!p) return;
+
+  document.getElementById('modalEyebrow').textContent = p.eyebrow;
+  document.getElementById('modalTitle').textContent   = p.title;
+
+  let html = '';
+
+  /* Bowls image for gong bath */
+  if (p.usesBowls) {
+    html += `
+      <div class="modal-image">
+        <img src="assets/bowls.jpg" alt="Crystal singing bowls"
+             onerror="this.parentElement.innerHTML='<div class=modal-image-placeholder></div>'">
+      </div>`;
+  }
+
+  /* Intro paragraphs */
+  p.intro.split('\n\n').forEach(para => {
+    html += `<p class="modal-intro">${para.trim()}</p>`;
+  });
+
+  /* Sections */
+  p.sections.forEach(s => {
+    html += `<div class="modal-section-title">${s.heading}</div><ul class="modal-list">`;
+    s.items.forEach(item => { html += `<li>${item}</li>`; });
+    html += '</ul>';
+  });
+
+  /* Schedule for pilates */
+  if (p.schedule) {
+    html += `
+      <div class="modal-section-title">Class Schedule</div>
+      <div class="modal-schedule">
+        <div class="modal-class-row">
+          <div>
+            <div class="modal-class-name">Gentle Pilates</div>
+            <div class="modal-class-time">Monday · 9:30 AM — 10:30 AM</div>
+          </div>
+          <div class="modal-class-price">£10</div>
+        </div>
+        <div class="modal-class-row">
+          <div>
+            <div class="modal-class-name">Evening Pilates</div>
+            <div class="modal-class-time">Wednesday · 6:30 PM — 7:30 PM</div>
+          </div>
+          <div class="modal-class-price">£10</div>
+        </div>
+      </div>`;
+  }
+
+  /* Note */
+  if (p.note) {
+    const noteText = p.note.text.replace(/\n/g, '<br>');
+    html += `<div class="modal-note"><strong>${p.note.heading}</strong>${noteText}</div>`;
+  }
+
+  document.getElementById('modalBody').innerHTML = html;
+
+  document.getElementById('modalOverlay').classList.add('open');
+  document.getElementById('modalPanel').classList.add('open');
+  document.getElementById('modalPanel').scrollTop = 0;
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+  document.getElementById('modalOverlay').classList.remove('open');
+  document.getElementById('modalPanel').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+/* Keyboard: close on Escape */
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeModal();
+});
+
+/* Keyboard: open card on Enter/Space */
+document.querySelectorAll('.service-card').forEach(card => {
+  card.addEventListener('keydown', e => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      card.click();
+    }
+  });
+});
+
+/* ── NAV ── */
+const nav = document.getElementById('mainNav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 50);
+}, { passive: true });
+
+/* ── HAMBURGER ── */
+const hamburger  = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+document.getElementById('mobileClose').addEventListener('click', closeMenu);
+hamburger.addEventListener('click', () => {
+  const open = mobileMenu.classList.toggle('open');
+  hamburger.classList.toggle('open', open);
+  document.body.style.overflow = open ? 'hidden' : '';
+});
+function closeMenu() {
+  mobileMenu.classList.remove('open');
+  hamburger.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+/* ── SCROLL REVEAL ── */
+const allReveal = document.querySelectorAll('.reveal,.reveal-l,.reveal-r,.reveal-sc');
+const observer  = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('on'); observer.unobserve(e.target); }
+  });
+}, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+allReveal.forEach(el => observer.observe(el));
+
+/* ── SMOOTH ANCHORS ── */
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const id = a.getAttribute('href');
+    if (id === '#') return;
+    const target = document.querySelector(id);
+    if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+  });
+});
+
+/* ── HERO PARALLAX ── */
+const heroText = document.querySelector('.hero-text');
+window.addEventListener('scroll', () => {
+  if (window.scrollY < window.innerHeight && heroText) {
+    heroText.style.transform = `translateY(${window.scrollY * 0.14}px)`;
+  }
+}, { passive: true });
+
+/* ── FORM ── */
+function handleForm(e) {
+  e.preventDefault();
+  const btn = document.getElementById('formBtn');
+  btn.textContent = 'Message Sent ✓';
+  btn.style.background = 'var(--accent)';
+  btn.disabled = true;
+  setTimeout(() => {
+    btn.textContent = 'Send Message';
+    btn.style.background = '';
+    btn.disabled = false;
+    e.target.reset();
+  }, 3500);
+}
+</script>
+</body>
+</html>
